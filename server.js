@@ -4,7 +4,7 @@ let bodyParser = require('body-parser');
 let path = require('path');
 
 let app = express();
-let PORT = 3000;
+let PORT = process.env.PORT || 3000;
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
